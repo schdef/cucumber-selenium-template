@@ -1,0 +1,1 @@
+Original Idea from http://thomassundberg.wordpress.com/2011/10/18/testing-a-web-application-with-selenium-2/
