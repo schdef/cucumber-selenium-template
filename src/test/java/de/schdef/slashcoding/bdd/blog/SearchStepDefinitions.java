@@ -2,19 +2,21 @@ package de.schdef.slashcoding.bdd.blog;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import cucumber.annotation.After;
 import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.runtime.PendingException;
+import de.schdef.slashcoding.utils.web.SeleniumWebdriverFactory;
 
 public class SearchStepDefinitions {
     private WebDriver driver;
 
     @Before
     public void prepare() {
-	driver = new FirefoxDriver();
+	driver = SeleniumWebdriverFactory.getDefaultWebdriver();
     }
 
     @After

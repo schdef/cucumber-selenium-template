@@ -4,12 +4,14 @@ import static junit.framework.Assert.*;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import cucumber.annotation.After;
 import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
+import de.schdef.slashcoding.utils.web.SeleniumWebdriverFactory;
 
 public class SearchStepDefinitions {
     private WebDriver driver;
@@ -18,7 +20,7 @@ public class SearchStepDefinitions {
 
     @Before
     public void prepare() {
-	driver = new FirefoxDriver();
+	driver = SeleniumWebdriverFactory.getDefaultWebdriver();
     }
 
     @After
